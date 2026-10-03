@@ -1,0 +1,477 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Dr. Nandita Mohan Clinical Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: sticky bar → split hero (story | portrait) → credentials grid → filterable case library with a before/after viewer → contact panel */
+:root{
+  --bg:#F2F6F5; --surface:#FFFFFF; --surface-2:#E8EFED; --ink:#10302F; --ink-2:#3C5755; --muted:#5F7673;
+  --line:#D3E0DD; --accent:#0E7A6E; --accent-ink:#FFFFFF; --accent-soft:#DCEFEA; --sun:#F3BC4E; --sun-ink:#2B2105;
+  --shadow:0 1px 2px rgba(16,48,47,.06),0 8px 24px rgba(16,48,47,.08);
+  --f-display:'Bricolage Grotesque','Trebuchet MS',system-ui,sans-serif;
+  --f-body:'Figtree','Segoe UI',system-ui,sans-serif;
+  --f-mono:'IBM Plex Mono',ui-monospace,'Courier New',monospace;
+  --r:14px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0C1919; --surface:#132423; --surface-2:#1A2F2E; --ink:#E6F0EE; --ink-2:#B3C7C4; --muted:#8FA6A3;
+  --line:#264341; --accent:#4CC0B0; --accent-ink:#06211E; --accent-soft:#163734; --sun:#E9B44A; --sun-ink:#211903;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px rgba(0,0,0,.35); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0C1919; --surface:#132423; --surface-2:#1A2F2E; --ink:#E6F0EE; --ink-2:#B3C7C4; --muted:#8FA6A3;
+  --line:#264341; --accent:#4CC0B0; --accent-ink:#06211E; --accent-soft:#163734; --sun:#E9B44A; --sun-ink:#211903;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px rgba(0,0,0,.35); color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+h1,h2,h3{font-family:var(--f-display);line-height:1.1;text-wrap:balance;margin:0;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+.eyebrow{font-family:var(--f-mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:500}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+
+/* top bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:20px;padding-block:14px}
+.brand{font-family:var(--f-display);font-weight:650;font-size:18px;color:var(--ink);text-decoration:none;white-space:nowrap}
+.brand span{color:var(--muted);font-weight:450}
+.nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.nav a{color:var(--ink-2);text-decoration:none;font-weight:500;font-size:15px;padding:6px 12px;border-radius:999px}
+.nav a:hover{background:var(--surface-2);color:var(--ink)}
+@media (max-width:640px){.brand span{display:none}.nav a{padding:6px 8px;font-size:14px}}
+
+/* hero */
+.hero{padding-block:clamp(36px,6vw,72px) clamp(28px,4vw,48px)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:clamp(28px,5vw,64px);align-items:center}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.portrait{order:-1;max-width:360px}}
+.hero h1{font-size:clamp(40px,6.4vw,76px);font-weight:650;margin-top:14px}
+.hero .role{font-family:var(--f-display);font-size:clamp(20px,2.4vw,26px);color:var(--ink-2);margin-top:10px;font-weight:450}
+.hero .lede{margin-top:20px;font-size:18px;color:var(--ink-2);max-width:60ch}
+.contact-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:14.5px;color:var(--ink)}
+.chip button{border:0;background:var(--surface-2);color:var(--ink-2);font:500 12px var(--f-mono);padding:3px 8px;border-radius:999px;cursor:pointer}
+.chip button:hover{background:var(--accent-soft);color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px}
+@media (max-width:560px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{border-top:2px solid var(--accent);padding-top:10px}
+.stat b{display:block;font-family:var(--f-display);font-size:34px;font-weight:600;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{display:block;font-size:13.5px;color:var(--muted);margin-top:6px;line-height:1.3}
+.portrait{position:relative;width:100%;justify-self:center}
+.portrait .frame{aspect-ratio:1/1;border-radius:46% 46% 22px 22px;overflow:hidden;background:var(--surface-2);box-shadow:var(--shadow)}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block;background:#fff}
+.portrait .tag{position:absolute;left:-10px;bottom:22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 14px;box-shadow:var(--shadow);font-size:13.5px;line-height:1.35}
+.portrait .tag b{display:block;font-family:var(--f-mono);font-weight:500;font-size:12px;color:var(--accent);letter-spacing:.06em;text-transform:uppercase}
+@media (max-width:860px){.portrait .tag{left:8px}}
+
+/* sections */
+section.block{padding-block:clamp(40px,6vw,72px);border-top:1px solid var(--line)}
+.head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;margin-bottom:28px}
+.head h2{font-size:clamp(30px,4vw,44px);font-weight:600;margin-top:8px}
+.head p.sub{color:var(--muted);max-width:52ch}
+.cards3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:900px){.cards3{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.card h3{font-size:21px;font-weight:600;margin-bottom:14px}
+.kv{display:flex;flex-direction:column;gap:14px}
+.kv div b{display:block;font-weight:600;font-size:15.5px}
+.kv div span{display:block;color:var(--muted);font-size:14.5px;line-height:1.4}
+.ok{display:inline-block;font:500 11.5px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;background:var(--accent-soft);color:var(--ink);padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:2px}
+.comp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:18px;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--surface)}
+.comp div{padding:18px 20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.comp div:nth-child(3n){border-right:0}
+.comp div:nth-last-child(-n+3){border-bottom:0}
+.comp b{display:block;font-family:var(--f-display);font-weight:600;font-size:17px;margin-bottom:4px}
+.comp span{color:var(--muted);font-size:14.5px;line-height:1.4;display:block}
+@media (max-width:900px){.comp{grid-template-columns:1fr}.comp div{border-right:0!important;border-bottom:1px solid var(--line)!important}.comp div:last-child{border-bottom:0!important}}
+.two{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(24px,4vw,48px);margin-top:44px}
+@media (max-width:900px){.two{grid-template-columns:1fr}}
+.two h3.sec{font-size:22px;font-weight:600;margin-bottom:16px}
+.timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding:0 0 22px 22px}
+.timeline li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--accent)}
+.timeline .when{font:500 12.5px var(--f-mono);color:var(--accent);letter-spacing:.04em}
+.timeline b{display:block;font-family:var(--f-display);font-weight:600;font-size:18px;margin-top:2px}
+.timeline .org{color:var(--ink-2);font-size:15px}
+.timeline .what{color:var(--muted);font-size:14.5px;margin-top:4px}
+.awards{display:flex;flex-direction:column;gap:10px;margin-bottom:22px}
+.award{display:flex;gap:14px;align-items:flex-start;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.award .yr{font:500 12.5px var(--f-mono);color:var(--sun-ink);background:var(--sun);padding:3px 8px;border-radius:6px;white-space:nowrap;margin-top:2px}
+.award b{display:block;font-weight:600;font-size:15px}
+.award span{color:var(--muted);font-size:14px}
+.pubs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.pubs li{padding:10px 0;border-top:1px solid var(--line);font-size:14.5px;color:var(--ink-2)}
+.pubs li i{color:var(--muted)}
+
+/* case library */
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:22px}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters button{font:500 14px var(--f-body);color:var(--ink-2);background:var(--surface);border:1px solid var(--line);padding:8px 14px;border-radius:999px;cursor:pointer;display:inline-flex;gap:8px;align-items:center}
+.filters button .n{font:500 12px var(--f-mono);color:var(--muted)}
+.filters button:hover{border-color:var(--accent)}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.filters button[aria-pressed="true"] .n{color:var(--bg);opacity:.75}
+.search{margin-left:auto;position:relative;min-width:0;flex:0 1 260px}
+.search input{width:100%;font:15px var(--f-body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:9px 14px}
+@media (max-width:700px){.search{margin-left:0;flex:1 1 100%}}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.case{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:transform .18s ease,box-shadow .18s ease,border-color .18s}
+.case:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}
+.case:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.thumb{position:relative;aspect-ratio:4/3;display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line)}
+.thumb.single{grid-template-columns:1fr}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block;min-width:0}
+.thumb .lb{position:absolute;bottom:8px;font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;padding:3px 7px;border-radius:5px}
+.lb.b{left:8px;background:rgba(12,25,25,.72);color:#fff}
+.lb.a{right:8px;background:var(--sun);color:var(--sun-ink)}
+.case .meta{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px}
+.case .top{display:flex;justify-content:space-between;gap:8px;font:500 12px var(--f-mono);color:var(--muted);letter-spacing:.04em}
+.case .top .no{color:var(--accent);white-space:nowrap}
+.case .top span:last-child{text-align:right}
+.case h3{font-size:18px;font-weight:600}
+.case .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.tg{font:500 11.5px var(--f-mono);color:var(--ink-2);background:var(--surface-2);padding:2px 8px;border-radius:999px}
+.tg.tooth{background:var(--accent-soft)}
+.empty{padding:40px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:var(--r)}
+
+/* viewer */
+dialog{border:0;padding:0;background:var(--surface);color:var(--ink);border-radius:18px;width:min(1100px,calc(100vw - 24px));max-height:calc(100dvh - 24px);box-shadow:0 30px 80px rgba(0,0,0,.35);overflow:hidden}
+dialog::backdrop{background:rgba(6,18,18,.62);backdrop-filter:blur(3px)}
+.vw{display:grid;grid-template-columns:1fr 330px;max-height:calc(100dvh - 24px)}
+@media (max-width:860px){.vw{grid-template-columns:1fr;overflow:auto}}
+.stage-col{background:#0B1716;display:flex;flex-direction:column;min-width:0}
+.stage{position:relative;flex:1;min-height:300px;display:flex;align-items:center;justify-content:center;padding:16px}
+.cmp{position:relative;width:100%;max-height:68dvh;aspect-ratio:var(--ar,4/3);border-radius:10px;overflow:hidden;user-select:none;touch-action:pan-y;cursor:ew-resize;max-width:100%}
+.cmp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.cmp .bef{clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
+.cmp .handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:3px;margin-left:-1.5px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.2)}
+.cmp .handle::after{content:"⟷";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;background:#fff;color:#10302F;display:grid;place-items:center;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.35)}
+.cmp .lb{position:absolute;top:12px;bottom:auto;font:500 11.5px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:5px}
+.cmp input[type=range]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.sbs{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%}
+.sbs figure{margin:0;position:relative}
+.sbs img{width:100%;max-height:62dvh;object-fit:contain;border-radius:10px;background:#000;display:block}
+.single-view{width:100%;display:flex;flex-direction:column;align-items:center;gap:10px}
+.single-view img{max-width:100%;max-height:66dvh;object-fit:contain;border-radius:10px;display:block}
+.single-view .cap{font:500 12px var(--f-mono);color:#CFE3DF;letter-spacing:.06em;text-transform:uppercase}
+.stage-bar{display:flex;gap:8px;align-items:center;justify-content:space-between;padding:10px 16px 14px;color:#CFE3DF;flex-wrap:wrap}
+.seg{display:inline-flex;background:#1B2C2B;border-radius:999px;padding:3px}
+.seg button{border:0;background:transparent;color:#CFE3DF;font:500 13px var(--f-body);padding:6px 12px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:#F2F6F5;color:#10302F}
+.hint{font-size:12.5px;color:#9DB8B3}
+.side{padding:22px 22px 18px;display:flex;flex-direction:column;gap:14px;overflow:auto;min-width:0}
+.side .x{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.iconbtn{border:1px solid var(--line);background:var(--surface);color:var(--ink);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:16px;display:grid;place-items:center}
+.iconbtn:hover{border-color:var(--accent)}
+.side h3{font-size:26px;font-weight:600}
+.side .desc{color:var(--ink-2);font-size:15.5px}
+.strip h4{margin:0 0 8px;font:500 12px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.strip .row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.strip button{all:unset;cursor:pointer;border-radius:8px;overflow:hidden;aspect-ratio:1/1;background:var(--surface-2);outline-offset:2px;position:relative}
+.strip button img{width:100%;height:100%;object-fit:cover;display:block}
+.strip button[aria-current="true"]{outline:3px solid var(--accent)}
+.strip button:focus-visible{outline:3px solid var(--accent)}
+.nav2{display:flex;gap:8px;margin-top:auto;padding-top:8px}
+.nav2 button{flex:1;font:600 14px var(--f-body);border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:10px;border-radius:10px;cursor:pointer}
+.nav2 button:hover{border-color:var(--accent)}
+
+/* contact */
+.contact{background:var(--ink);color:var(--bg);border-radius:22px;padding:clamp(24px,5vw,52px);display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,44px);align-items:center}
+@media (max-width:720px){.contact{grid-template-columns:1fr}}
+.contact img{width:150px;height:150px;border-radius:50%;object-fit:cover;background:#fff;border:4px solid var(--sun)}
+.contact h2{font-size:clamp(28px,4vw,40px);font-weight:600}
+.contact .eyebrow{color:var(--sun)}
+.contact .lines{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px;margin-top:18px}
+@media (max-width:720px){.contact .lines{grid-template-columns:1fr}}
+.contact .ln{display:flex;flex-direction:column;gap:2px;min-width:0}
+.contact .ln small{font:500 11.5px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;opacity:.7}
+.contact .ln span{font-size:17px;overflow-wrap:anywhere}
+.contact button{align-self:flex-start;margin-top:4px;border:1px solid color-mix(in srgb,var(--bg) 35%,transparent);background:transparent;color:var(--bg);font:500 12px var(--f-mono);padding:3px 9px;border-radius:999px;cursor:pointer}
+footer{padding-block:28px 40px;color:var(--muted);font-size:13.5px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:999px;font-size:14px;z-index:60}
+</style>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top">Dr. Nandita Mohan <span>· Pediatric Dentist</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#profile">Profile</a><a href="#credentials">Credentials</a><a href="#cases">Cases</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" id="profile">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Clinical portfolio · 49 documented cases</p>
+        <h1>Dr. Nandita Mohan</h1>
+        <p class="role">Specialist Pediatric Dentist (Pedodontist) · MDS, Pedodontics &amp; Preventive Dentistry</p>
+        <p class="lede">A Specialist Pediatric Dentist with over 11 years of clinical experience caring for children of all ages. Her practice spans complex rotary endodontics, aesthetic full-mouth rehabilitation and preventive and interceptive orthodontics, supported by advanced child behaviour management and certification in conscious sedation.</p>
+        <div class="contact-row">
+          <span class="chip">Dubai, UAE</span>
+          <span class="chip"><span>+971 55 860 0148</span><button type="button" data-copy="+971558600148">Copy</button></span>
+          <span class="chip"><span>mohan.nandita@gmail.com</span><button type="button" data-copy="mohan.nandita@gmail.com">Copy</button></span>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>11+</b><span>Years in clinical practice</span></div>
+          <div class="stat"><b>49</b><span>Cases in this portfolio</span></div>
+          <div class="stat"><b>2×</b><span>Clinical Excellence Award</span></div>
+          <div class="stat"><b>6</b><span>Peer-reviewed publications</span></div>
+        </div>
+      </div>
+      <div class="portrait">
+        <div class="frame"><img src="images/profile.jpg" alt="Portrait of Dr. Nandita Mohan"></div>
+        <div class="tag"><b>DHA</b>Specialist Pediatric Dentistry<br>Prometric passed</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="credentials">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="eyebrow">Credentials</p><h2>Licensure, training &amp; scope</h2></div>
+        <p class="sub">DHA-eligible, with primary source verification complete.</p>
+      </div>
+      <div class="cards3">
+        <div class="card"><h3>DHA licensure</h3><div class="kv">
+          <div><b>Specialist Pediatric Dentistry Prometric <span class="ok">Passed</span></b></div>
+          <div><b>DataFlow Primary Source Verification <span class="ok">Done</span></b></div>
+          <div><b>DHA Eligibility Application <span class="ok">Done</span></b></div>
+          <div><b>Registered Dental Surgeon</b><span>Delhi Dental Council, Reg. No. A-13261</span></div>
+        </div></div>
+        <div class="card"><h3>Education</h3><div class="kv">
+          <div><b>MDS, Pedodontics &amp; Preventive Dentistry · 2016</b><span>Sudha Rustagi College of Dental Sciences &amp; Research, Pt. B.D. Sharma University of Health Sciences</span></div>
+          <div><b>Bachelor of Dental Surgery · 2013</b><span>M.R. Ambedkar Dental College &amp; Hospital, Rajiv Gandhi University of Health Sciences</span></div>
+          <div><b>Honours</b><span>Best Outgoing Student; overall college topper in 2nd and 3rd year</span></div>
+        </div></div>
+        <div class="card"><h3>Certifications</h3><div class="kv">
+          <div><b>Conscious Sedation</b><span>July 2022</span></div>
+          <div><b>Rotary Endodontics in Pediatric Dentistry</b><span>ISPPD</span></div>
+          <div><b>Child Abuse &amp; Neglect Identification</b><span>Maulana Azad Institute of Dental Sciences</span></div>
+          <div><b>COVID-19 Operational Planning &amp; Contact Tracing</b><span>WHO, March 2020</span></div>
+        </div></div>
+      </div>
+      <div class="comp" aria-label="Core clinical competencies">
+        <div><b>Endodontics &amp; restorations</b><span>Rotary pulpotomy and pulpectomy, post-and-core build-ups, strip crowns, stainless steel and zirconia crowns.</span></div>
+        <div><b>Behaviour management</b><span>Non-pharmacological techniques; certified in conscious sedation.</span></div>
+        <div><b>Interceptive orthodontics</b><span>Fixed and removable space maintainers, crossbite correction, habit-breaking appliances.</span></div>
+        <div><b>Surgical procedures</b><span>Operculectomies, frenectomies, mucocele excisions, third molar extractions, crown lengthening.</span></div>
+        <div><b>Prevention &amp; trauma</b><span>Sealants, fluoride therapy, apexification and management of traumatic dental injuries.</span></div>
+        <div><b>General anaesthesia care</b><span>Full-mouth rehabilitation, splint placement and tumour excision under GA (Cases 6–8).</span></div>
+      </div>
+      <div class="two">
+        <div>
+          <h3 class="sec">Professional experience</h3>
+          <ol class="timeline">
+            <li><span class="when">SEP 2021 – PRESENT</span><b>Head of Dental Department</b><span class="org">Sanjeevan Medical Research Centre, New Delhi</span><p class="what">Leads clinical operations, treatment planning and patient-care standards; manages full-mouth rehabilitation and dental trauma.</p></li>
+            <li><span class="when">SEP 2021 – PRESENT</span><b>Head, MDTV Division</b><span class="org">Minerva Medical Treatment Pvt. Ltd. (Medical Dialogues), New Delhi</span><p class="what">Directs clinical content and editorial standards for an online medical news platform.</p></li>
+            <li><span class="when">JUN 2017 – AUG 2021</span><b>Chief Pedodontic Consultant &amp; Clinic Head</b><span class="org">Star Dental Pvt. Ltd. (Clove Dental), New Delhi</span><p class="what">Lead paediatric specialist for one of India's largest dental chains; managed clinic operations and patient flow.</p></li>
+            <li><span class="when">SEP 2015 – JUN 2017</span><b>Consultant Pedodontist &amp; Resident Dentist</b><span class="org">Multispeciality Dental and Implant Centre, New Delhi</span><p class="what">Paediatric diagnosis and treatment with a focus on behaviour management and prevention.</p></li>
+          </ol>
+        </div>
+        <div>
+          <h3 class="sec">Awards &amp; research</h3>
+          <div class="awards">
+            <div class="award"><span class="yr">2017–19</span><div><b>Clinical Excellence Award, Pedodontics &amp; Preventive Dentistry</b><span>Clove Dental, two consecutive years</span></div></div>
+            <div class="award"><span class="yr">2015</span><div><b>Best Paper, “Apexification in Primary Teeth”</b><span>37th ISPPD National Conference, Raipur</span></div></div>
+            <div class="award"><span class="yr">2014</span><div><b>Best Paper, “Prader-Willi Syndrome”</b><span>36th ISPPD National Conference, Lucknow</span></div></div>
+          </div>
+          <ul class="pubs" aria-label="Publications, first author">
+            <li>Dental caries prevalence among institutionalized visually impaired children in Delhi state. <i>Int J Oral Care Res, 2020</i></li>
+            <li>Apexification in primary central incisor. <i>Int J Prev Clin Dent Res, 2020</i></li>
+            <li>Diagnosis of child abuse and neglect: a global concern. <i>J Dent Health &amp; Res, 2020</i></li>
+            <li>Cleft palate treatment modification: a case report. <i>J Dent Health &amp; Res, 2020;1(1):28–31</i></li>
+            <li>Haemangiopericytoma: an unusual case of the maxilla and mandible. <i>Int J Prev Clin Dent Res, 2018;5(1):S1–4</i></li>
+            <li>Oral health status among institutionalized visually impaired children and adults aged 6–25 years in Delhi. <i>Int J Oral Health Med Res, 2016;3(4):1–5</i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="cases">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="eyebrow">Case library</p><h2>Clinical cases, before and after</h2></div>
+        <p class="sub">Open any case to compare pre- and post-operative records with the slider, or step through every photo and radiograph.</p>
+      </div>
+      <div class="tools">
+        <div class="filters" id="filters" role="group" aria-label="Filter by area of practice"></div>
+        <label class="search"><span hidden>Search cases</span><input id="q" type="search" placeholder="Search, e.g. zirconia, 55, GA" autocomplete="off"></label>
+      </div>
+      <div class="grid" id="grid"></div>
+      <p class="empty" id="empty" hidden>No cases match that search. Try a treatment such as “crown” or a tooth number such as “51”.</p>
+    </div>
+  </section>
+
+  <section class="block" id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <img src="images/profile.jpg" alt="Dr. Nandita Mohan">
+        <div>
+          <p class="eyebrow">Get in touch</p>
+          <h2>Dr. Nandita Mohan</h2>
+          <p style="opacity:.85;margin-top:6px">Specialist Pediatric Dentist (Pedodontist) · Languages: English, Hindi, Tamil</p>
+          <div class="lines">
+            <div class="ln"><small>Phone</small><span>+971 55 860 0148</span><button type="button" data-copy="+971558600148">Copy</button></div>
+            <div class="ln"><small>Email</small><span>mohan.nandita@gmail.com</span><button type="button" data-copy="mohan.nandita@gmail.com">Copy</button></div>
+            <div class="ln"><small>LinkedIn</small><span><a href="https://linkedin.com/in/nandita-mohan-338a8b90" style="color:inherit">linkedin.com/in/nandita-mohan-338a8b90</a></span></div>
+            <div class="ln"><small>Location</small><span>Dubai, UAE</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">Clinical portfolio of Dr. Nandita Mohan. Photographs and radiographs are from her own case records.</div></footer>
+
+<dialog id="viewer" aria-labelledby="v-title">
+  <div class="vw">
+    <div class="stage-col">
+      <div class="stage" id="stage"></div>
+      <div class="stage-bar">
+        <div class="seg" id="mode" role="group" aria-label="View mode">
+          <button type="button" data-m="slider" aria-pressed="true">Slider</button>
+          <button type="button" data-m="sbs" aria-pressed="false">Side by side</button>
+        </div>
+        <span class="hint" id="hint">Drag to compare · ← → for other cases</span>
+      </div>
+    </div>
+    <div class="side">
+      <div class="x"><span class="eyebrow" id="v-no"></span><button class="iconbtn" type="button" id="close" aria-label="Close case">✕</button></div>
+      <h3 id="v-title"></h3>
+      <div class="tags" id="v-tags" style="display:flex;flex-wrap:wrap;gap:6px"></div>
+      <p class="desc" id="v-desc"></p>
+      <div id="v-strips" style="display:flex;flex-direction:column;gap:14px"></div>
+      <div class="nav2"><button type="button" id="prev">← Previous</button><button type="button" id="next">Next →</button></div>
+    </div>
+  </div>
+</dialog>
+<div class="toast" id="toast" hidden role="status"></div>
+
+<script>
+const CASES = [{"n": 1, "cat": "Full mouth rehabilitation", "title": "Multiple stainless steel crowns", "desc": "Carious primary molars in both arches restored with stainless steel crowns as part of a full-mouth rehabilitation.", "age": "7 yrs", "teeth": [], "imgs": [{"src": "images/c01_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.294}, {"src": "images/c01_1.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.335}, {"src": "images/c01_2.jpg", "g": "after", "cap": "Post-operative", "ar": 1.294}, {"src": "images/c01_3.jpg", "g": "after", "cap": "Post-operative", "ar": 1.334}]}, {"n": 2, "cat": "Full mouth rehabilitation", "title": "Zirconia crowns & space maintainer", "desc": "Zirconia crowns on 55 and 65, with a space maintainer placed on 75.", "age": "8 yrs", "teeth": ["55", "65", "75"], "imgs": [{"src": "images/c02_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.382}, {"src": "images/c02_1.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.282}, {"src": "images/c02_2.jpg", "g": "after", "cap": "Post-operative", "ar": 1.34}, {"src": "images/c02_3.jpg", "g": "after", "cap": "Post-operative", "ar": 1.419}, {"src": "images/c02_4.jpg", "g": "after", "cap": "Post-operative", "ar": 1.393}]}, {"n": 3, "cat": "Full mouth rehabilitation", "title": "Crowns with space maintenance", "desc": "Stainless steel crowns combined with crown-and-loop and band-and-loop space maintainers.", "age": null, "teeth": [], "imgs": [{"src": "images/c03_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.271}, {"src": "images/c03_1.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.239}, {"src": "images/c03_2.jpg", "g": "after", "cap": "Post-operative", "ar": 1.346}, {"src": "images/c03_3.jpg", "g": "after", "cap": "Post-operative", "ar": 1.208}, {"src": "images/c03_4.jpg", "g": "after", "cap": "Post-operative", "ar": 1.315}]}, {"n": 4, "cat": "Full mouth rehabilitation", "title": "Removable functional prosthesis", "desc": "A removable functional prosthesis restoring function and appearance after early loss of primary teeth.", "age": "4 yrs", "teeth": [], "imgs": [{"src": "images/c04_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.918}, {"src": "images/c04_1.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.702}, {"src": "images/c04_2.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.512}, {"src": "images/c04_3.jpg", "g": "after", "cap": "Post-operative", "ar": 1.656}, {"src": "images/c04_4.jpg", "g": "after", "cap": "Post-operative", "ar": 1.502}, {"src": "images/c04_5.jpg", "g": "after", "cap": "Post-operative", "ar": 1.496}]}, {"n": 5, "cat": "Full mouth rehabilitation", "title": "Removable dentures, special needs", "desc": "Removable dentures fabricated for a patient with Down syndrome.", "age": null, "teeth": [], "imgs": [{"src": "images/c05_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.569}, {"src": "images/c05_1.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.48}, {"src": "images/c05_2.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.501}, {"src": "images/c05_3.jpg", "g": "after", "cap": "Post-operative", "ar": 1.417}, {"src": "images/c05_4.jpg", "g": "after", "cap": "Post-operative", "ar": 1.335}, {"src": "images/c05_5.jpg", "g": "after", "cap": "Post-operative", "ar": 1.472}]}, {"n": 6, "cat": "Full mouth rehabilitation", "title": "Severe early childhood caries under GA", "desc": "Comprehensive treatment of severe early childhood caries under general anaesthesia, with pre- and post-operative OPGs.", "age": null, "teeth": [], "imgs": [{"src": "images/c06_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 2.287}, {"src": "images/c06_1.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.518}, {"src": "images/c06_2.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.507}, {"src": "images/c06_3.jpg", "g": "after", "cap": "Post-operative", "ar": 1.991}, {"src": "images/c06_4.jpg", "g": "after", "cap": "Post-operative", "ar": 1.722}, {"src": "images/c06_5.jpg", "g": "after", "cap": "Post-operative", "ar": 2.193}, {"src": "images/c06_6.jpg", "g": "before", "cap": "OPG", "ar": 1.846}, {"src": "images/c06_7.jpg", "g": "after", "cap": "OPG", "ar": 1.848}]}, {"n": 7, "cat": "Surgery & GA", "title": "Excision of a jaw tumour", "desc": "Surgical excision of a haemangiopericytoma involving both arches, performed under general anaesthesia.", "age": "5 yrs", "teeth": [], "imgs": [{"src": "images/c07_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.804}, {"src": "images/c07_1.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.191}, {"src": "images/c07_2.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.676}, {"src": "images/c07_3.jpg", "g": "after", "cap": "Post-operative", "ar": 1.219}, {"src": "images/c07_4.jpg", "g": "after", "cap": "Post-operative", "ar": 1.554}]}, {"n": 8, "cat": "Surgery & GA", "title": "Gunning splint under GA", "desc": "Impressions taken, a Gunning splint fabricated, and the splint placed under general anaesthesia.", "age": "2 yrs", "teeth": [], "imgs": [{"src": "images/c08_0.jpg", "g": "before", "cap": "Impressions", "ar": 2.299}, {"src": "images/c08_1.jpg", "g": "after", "cap": "Gunning splint", "ar": 1.572}, {"src": "images/c08_2.jpg", "g": "after", "cap": "Placement under GA", "ar": 1.02}]}, {"n": 9, "cat": "Surgery & GA", "title": "Mucocele excision", "desc": "Surgical excision of a mucocele of the lower lip.", "age": "8 yrs", "teeth": [], "imgs": [{"src": "images/c09_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.839}, {"src": "images/c09_1.jpg", "g": "during", "cap": "Excised specimen", "ar": 0.719}, {"src": "images/c09_2.jpg", "g": "after", "cap": "Post-operative", "ar": 1.723}]}, {"n": 10, "cat": "Surgery & GA", "title": "Fibroma excision", "desc": "Surgical excision of a fibroma, with the excised specimen.", "age": "9 yrs", "teeth": [], "imgs": [{"src": "images/c10_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.304}, {"src": "images/c10_1.jpg", "g": "during", "cap": "Excised specimen", "ar": 1.199}, {"src": "images/c10_2.jpg", "g": "after", "cap": "Post-operative", "ar": 1.504}]}, {"n": 11, "cat": "Anterior aesthetics", "title": "Pulpectomy & anterior zirconia crowns", "desc": "Grossly decayed upper incisors treated with pulpectomy and restored with anterior zirconia crowns, with radiographs.", "age": null, "teeth": [], "imgs": [{"src": "images/c11_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 2.104}, {"src": "images/c11_1.jpg", "g": "before", "cap": "Radiograph", "ar": 1.376}, {"src": "images/c11_2.jpg", "g": "after", "cap": "Post-operative", "ar": 2.356}, {"src": "images/c11_3.jpg", "g": "after", "cap": "Radiograph", "ar": 1.357}]}, {"n": 12, "cat": "Anterior aesthetics", "title": "Pulpectomy & anterior zirconia crowns", "desc": "Decayed primary incisors treated with pulpectomy and restored with anterior zirconia crowns.", "age": null, "teeth": [], "imgs": [{"src": "images/c12_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.663}, {"src": "images/c12_1.jpg", "g": "after", "cap": "Post-operative", "ar": 1.633}]}, {"n": 13, "cat": "Posterior crowns", "title": "Zirconia crown", "desc": "Decayed primary molar restored with a zirconia crown.", "age": null, "teeth": [], "imgs": [{"src": "images/c13_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 0.777}, {"src": "images/c13_1.jpg", "g": "after", "cap": "Post-operative", "ar": 0.904}]}, {"n": 14, "cat": "Posterior crowns", "title": "Zirconia crown", "desc": "Decayed primary molar restored with a zirconia crown.", "age": null, "teeth": [], "imgs": [{"src": "images/c14_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 0.747}, {"src": "images/c14_1.jpg", "g": "after", "cap": "Post-operative", "ar": 0.746}]}, {"n": 15, "cat": "Posterior crowns", "title": "BioFlx crown", "desc": "Decayed primary molar restored with a tooth-coloured BioFlx crown.", "age": null, "teeth": [], "imgs": [{"src": "images/c15_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.675}, {"src": "images/c15_1.jpg", "g": "after", "cap": "Post-operative", "ar": 1.642}]}, {"n": 16, "cat": "Posterior crowns", "title": "BioFlx crown", "desc": "Decayed primary molar restored with a tooth-coloured BioFlx crown.", "age": null, "teeth": [], "imgs": [{"src": "images/c16_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.675}, {"src": "images/c16_1.jpg", "g": "after", "cap": "Post-operative", "ar": 1.593}]}, {"n": 17, "cat": "Posterior crowns", "title": "BioFlx crown", "desc": "Decayed primary molar restored with a tooth-coloured BioFlx crown.", "age": null, "teeth": [], "imgs": [{"src": "images/c17_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.635}, {"src": "images/c17_1.jpg", "g": "after", "cap": "Post-operative", "ar": 1.635}]}, {"n": 18, "cat": "Posterior crowns", "title": "BioFlx crown with pulp therapy", "desc": "Decayed lower molar treated with pulp therapy and restored with a BioFlx crown, with a post-operative radiograph.", "age": null, "teeth": [], "imgs": [{"src": "images/c18_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 0.874}, {"src": "images/c18_1.jpg", "g": "after", "cap": "Post-operative", "ar": 0.822}, {"src": "images/c18_2.jpg", "g": "after", "cap": "Radiograph", "ar": 0.83}]}, {"n": 19, "cat": "Posterior crowns", "title": "Stainless steel crowns", "desc": "Decayed lower primary molars restored with stainless steel crowns.", "age": null, "teeth": [], "imgs": [{"src": "images/c19_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 2.5}, {"src": "images/c19_1.jpg", "g": "after", "cap": "Post-operative", "ar": 2.5}]}, {"n": 20, "cat": "Posterior crowns", "title": "Stainless steel crowns after pulp therapy", "desc": "Adjacent decayed primary molars treated and restored with stainless steel crowns, with a post-operative radiograph.", "age": null, "teeth": [], "imgs": [{"src": "images/c20_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 0.882}, {"src": "images/c20_1.jpg", "g": "after", "cap": "Post-operative", "ar": 0.883}, {"src": "images/c20_2.jpg", "g": "after", "cap": "Radiograph", "ar": 1.0}]}, {"n": 21, "cat": "Posterior crowns", "title": "Stainless steel crown", "desc": "Proximal caries on a primary molar restored with a stainless steel crown, documented clinically and radiographically.", "age": null, "teeth": [], "imgs": [{"src": "images/c21_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 0.722}, {"src": "images/c21_1.jpg", "g": "before", "cap": "Radiograph", "ar": 0.815}, {"src": "images/c21_2.jpg", "g": "after", "cap": "Post-operative", "ar": 0.814}, {"src": "images/c21_3.jpg", "g": "after", "cap": "Radiograph", "ar": 0.746}]}, {"n": 22, "cat": "Posterior crowns", "title": "Stainless steel crowns", "desc": "Post-operative record of a stainless steel crown restoration.", "age": null, "teeth": [], "imgs": [{"src": "images/c22_0.jpg", "g": "after", "cap": "Post-operative", "ar": 1.663}]}, {"n": 23, "cat": "Posterior crowns", "title": "Stainless steel crown", "desc": "Post-operative record of a stainless steel crown restoration.", "age": null, "teeth": [], "imgs": [{"src": "images/c23_0.jpg", "g": "after", "cap": "Post-operative", "ar": 1.037}]}, {"n": 24, "cat": "Posterior crowns", "title": "Stainless steel crown", "desc": "Post-operative record of a stainless steel crown restoration.", "age": null, "teeth": [], "imgs": [{"src": "images/c24_0.jpg", "g": "after", "cap": "Post-operative", "ar": 0.763}]}, {"n": 25, "cat": "Pulp therapy", "title": "Pulpectomy", "desc": "Post-operative radiograph of a primary molar pulpectomy.", "age": null, "teeth": [], "imgs": [{"src": "images/c25_0.jpg", "g": "after", "cap": "Post-operative", "ar": 1.262}]}, {"n": 26, "cat": "Pulp therapy", "title": "Pulpectomy", "desc": "Post-operative radiograph of a primary molar pulpectomy.", "age": null, "teeth": [], "imgs": [{"src": "images/c26_0.jpg", "g": "after", "cap": "Post-operative", "ar": 1.197}]}, {"n": 27, "cat": "Pulp therapy", "title": "Pulpectomy", "desc": "Post-operative radiograph of a primary molar pulpectomy.", "age": null, "teeth": [], "imgs": [{"src": "images/c27_0.jpg", "g": "after", "cap": "Post-operative", "ar": 1.012}]}, {"n": 28, "cat": "Pulp therapy", "title": "Pulpectomy", "desc": "Post-operative radiograph of a primary molar pulpectomy.", "age": null, "teeth": [], "imgs": [{"src": "images/c28_0.jpg", "g": "after", "cap": "Post-operative", "ar": 1.298}]}, {"n": 29, "cat": "Pulp therapy", "title": "Pulpectomy", "desc": "Post-operative radiograph of a primary molar pulpectomy.", "age": null, "teeth": [], "imgs": [{"src": "images/c29_0.jpg", "g": "after", "cap": "Post-operative", "ar": 1.18}]}, {"n": 30, "cat": "Pulp therapy", "title": "Pulpectomy", "desc": "Post-operative radiograph of a primary molar pulpectomy.", "age": null, "teeth": [], "imgs": [{"src": "images/c30_0.jpg", "g": "after", "cap": "Post-operative", "ar": 1.369}]}, {"n": 31, "cat": "Pulp therapy", "title": "Pulpotomy", "desc": "Post-operative radiograph of a primary molar pulpotomy.", "age": null, "teeth": [], "imgs": [{"src": "images/c31_0.jpg", "g": "after", "cap": "Post-operative", "ar": 1.303}]}, {"n": 32, "cat": "Pulp therapy", "title": "Pulpotomy", "desc": "Post-operative radiograph of a primary molar pulpotomy.", "age": null, "teeth": [], "imgs": [{"src": "images/c32_0.jpg", "g": "after", "cap": "Post-operative", "ar": 1.614}]}, {"n": 33, "cat": "Pulp therapy", "title": "Pulpotomy", "desc": "Post-operative radiograph of a primary molar pulpotomy.", "age": null, "teeth": [], "imgs": [{"src": "images/c33_0.jpg", "g": "after", "cap": "Post-operative", "ar": 1.711}]}, {"n": 34, "cat": "Habit correction", "title": "Myobrace therapy", "desc": "Myofunctional habit correction with a Myobrace pre-orthodontic appliance.", "age": null, "teeth": [], "imgs": [{"src": "images/c34_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.973}, {"src": "images/c34_1.jpg", "g": "during", "cap": "Appliance in place", "ar": 2.0}, {"src": "images/c34_2.jpg", "g": "after", "cap": "Post-operative", "ar": 1.771}]}, {"n": 35, "cat": "Habit correction", "title": "Myobrace therapy", "desc": "Myofunctional habit correction with a Myobrace pre-orthodontic appliance.", "age": null, "teeth": [], "imgs": [{"src": "images/c35_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.685}, {"src": "images/c35_1.jpg", "g": "during", "cap": "Appliance in place", "ar": 1.812}, {"src": "images/c35_2.jpg", "g": "after", "cap": "Post-operative", "ar": 2.17}]}, {"n": 36, "cat": "Habit correction", "title": "Myobrace therapy", "desc": "Myofunctional habit correction with a Myobrace pre-orthodontic appliance.", "age": null, "teeth": [], "imgs": [{"src": "images/c36_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.84}, {"src": "images/c36_1.jpg", "g": "during", "cap": "Appliance in place", "ar": 1.942}, {"src": "images/c36_2.jpg", "g": "after", "cap": "Post-operative", "ar": 1.943}]}, {"n": 37, "cat": "Space maintainers", "title": "Band-and-loop space maintainer", "desc": "A band-and-loop space maintainer in the lower arch, recorded before and after.", "age": null, "teeth": [], "imgs": [{"src": "images/c37_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.393}, {"src": "images/c37_1.jpg", "g": "after", "cap": "Post-operative", "ar": 1.419}]}, {"n": 38, "cat": "Space maintainers", "title": "Lingual holding arch", "desc": "Fixed space maintainer, post-operative record.", "age": null, "teeth": [], "imgs": [{"src": "images/c38_0.jpg", "g": "after", "cap": "Post-operative", "ar": 1.606}]}, {"n": 39, "cat": "Space maintainers", "title": "Nance palatal arch", "desc": "Fixed space maintainer, post-operative record.", "age": null, "teeth": [], "imgs": [{"src": "images/c39_0.jpg", "g": "after", "cap": "Post-operative", "ar": 1.375}]}, {"n": 40, "cat": "Space maintainers", "title": "Crown and loop", "desc": "Fixed space maintainer, post-operative record.", "age": null, "teeth": [], "imgs": [{"src": "images/c40_0.jpg", "g": "after", "cap": "Post-operative", "ar": 1.442}]}, {"n": 41, "cat": "Space maintainers", "title": "Transpalatal arch", "desc": "Fixed space maintainer, post-operative record.", "age": null, "teeth": [], "imgs": [{"src": "images/c41_0.jpg", "g": "after", "cap": "Post-operative", "ar": 1.445}]}, {"n": 42, "cat": "Space maintainers", "title": "Bilateral band and loop", "desc": "Fixed space maintainer, post-operative record.", "age": null, "teeth": [], "imgs": [{"src": "images/c42_0.jpg", "g": "after", "cap": "Post-operative", "ar": 1.671}]}, {"n": 43, "cat": "Space maintainers", "title": "Prefabricated band and loop", "desc": "Fixed space maintainer, post-operative record.", "age": null, "teeth": [], "imgs": [{"src": "images/c43_0.jpg", "g": "after", "cap": "Post-operative", "ar": 1.485}]}, {"n": 44, "cat": "Space maintainers", "title": "Modified reverse bilateral band and loop", "desc": "Fixed space maintainer, post-operative record.", "age": null, "teeth": [], "imgs": [{"src": "images/c44_0.jpg", "g": "after", "cap": "Post-operative", "ar": 1.542}]}, {"n": 45, "cat": "Habit correction", "title": "Removable crib appliance", "desc": "A removable appliance with a palatal crib, used to break an oral habit.", "age": null, "teeth": [], "imgs": [{"src": "images/c45_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 2.094}, {"src": "images/c45_1.jpg", "g": "during", "cap": "Appliance in place", "ar": 1.289}, {"src": "images/c45_2.jpg", "g": "after", "cap": "Post-operative", "ar": 1.95}]}, {"n": 46, "cat": "Habit correction", "title": "Fixed crib appliance", "desc": "A fixed palatal crib appliance, banded to the molars, used to break an oral habit.", "age": null, "teeth": [], "imgs": [{"src": "images/c46_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.973}, {"src": "images/c46_1.jpg", "g": "during", "cap": "Appliance (occlusal)", "ar": 1.093}, {"src": "images/c46_2.jpg", "g": "during", "cap": "Appliance in place", "ar": 1.413}, {"src": "images/c46_3.jpg", "g": "after", "cap": "Post-operative", "ar": 1.771}]}, {"n": 47, "cat": "Special cases", "title": "Groper's appliance", "desc": "Decayed upper primary incisors replaced with a fixed Groper's appliance to restore the smile.", "age": "6 yrs", "teeth": [], "imgs": [{"src": "images/c47_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.831}, {"src": "images/c47_1.jpg", "g": "during", "cap": "Appliance", "ar": 1.491}, {"src": "images/c47_2.jpg", "g": "after", "cap": "Post-operative", "ar": 1.833}]}, {"n": 48, "cat": "Special cases", "title": "Obturator fabrication", "desc": "An obturator fabricated to close a palatal defect, alongside restorative care of the posterior teeth.", "age": "11 yrs", "teeth": [], "imgs": [{"src": "images/c48_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.849}, {"src": "images/c48_1.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.717}, {"src": "images/c48_2.jpg", "g": "after", "cap": "Post-operative", "ar": 1.613}, {"src": "images/c48_3.jpg", "g": "after", "cap": "Post-operative", "ar": 1.835}, {"src": "images/c48_4.jpg", "g": "after", "cap": "Radiograph", "ar": 1.244}]}, {"n": 49, "cat": "Special cases", "title": "Apexification of tooth 51", "desc": "Apexification of the primary upper central incisor (51) in a very young child, with radiographic follow-up.", "age": "2.5 yrs", "teeth": ["51"], "imgs": [{"src": "images/c49_0.jpg", "g": "before", "cap": "Pre-operative", "ar": 1.879}, {"src": "images/c49_1.jpg", "g": "before", "cap": "Radiograph", "ar": 0.878}, {"src": "images/c49_2.jpg", "g": "before", "cap": "Radiograph", "ar": 0.847}, {"src": "images/c49_3.jpg", "g": "after", "cap": "Post-operative", "ar": 2.244}, {"src": "images/c49_4.jpg", "g": "after", "cap": "Radiograph", "ar": 0.892}, {"src": "images/c49_5.jpg", "g": "after", "cap": "Radiograph", "ar": 0.731}]}];
+const CATS = ['Full mouth rehabilitation','Surgery & GA','Anterior aesthetics','Posterior crowns','Pulp therapy','Habit correction','Space maintainers','Special cases'];
+const pad = n => String(n).padStart(2,'0');
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let cat = 'All', q = '', visible = [], cur = -1, mode = 'slider', focusImg = null;
+
+function first(c,g){ return c.imgs.find(i => i.g === g); }
+function tagsHTML(c){
+  const t = [];
+  if (c.age) t.push(`<span class="tg">Age ${esc(c.age.replace('yrs','years'))}</span>`);
+  if (c.teeth.length) t.push(`<span class="tg tooth" title="FDI tooth numbers">${c.teeth.length>1?'Teeth':'Tooth'} ${c.teeth.map(esc).join(' · ')}</span>`);
+  t.push(`<span class="tg">${c.imgs.length} record${c.imgs.length>1?'s':''}</span>`);
+  return t.join('');
+}
+function renderFilters(){
+  const counts = {All: CASES.length}; CASES.forEach(c => counts[c.cat] = (counts[c.cat]||0)+1);
+  document.getElementById('filters').innerHTML = ['All', ...CATS].map(k =>
+    `<button type="button" data-cat="${esc(k)}" aria-pressed="${k===cat}">${esc(k)} <span class="n">${counts[k]||0}</span></button>`).join('');
+}
+function renderGrid(){
+  const needle = q.trim().toLowerCase();
+  visible = CASES.filter(c => (cat==='All' || c.cat===cat) &&
+    (!needle || [c.title,c.desc,c.cat,'case '+c.n,...c.teeth].join(' ').toLowerCase().includes(needle)));
+  document.getElementById('grid').innerHTML = visible.map((c,i) => {
+    const b = first(c,'before'), a = first(c,'after') || c.imgs[c.imgs.length-1];
+    const thumb = b && a && b!==a
+      ? `<div class="thumb"><img loading="lazy" src="${b.src}" alt=""><img loading="lazy" src="${a.src}" alt=""><span class="lb b">Before</span><span class="lb a">After</span></div>`
+      : `<div class="thumb single"><img loading="lazy" src="${a.src}" alt=""><span class="lb a">Post-op</span></div>`;
+    return `<button class="case" type="button" data-i="${i}" aria-label="Case ${c.n}: ${esc(c.title)}">${thumb}
+      <div class="meta"><div class="top"><span class="no">CASE ${pad(c.n)}</span><span>${esc(c.cat)}</span></div>
+      <h3>${esc(c.title)}</h3><div class="tags">${tagsHTML(c)}</div></div></button>`;
+  }).join('');
+  document.getElementById('empty').hidden = visible.length > 0;
+}
+document.getElementById('filters').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  cat = b.dataset.cat; renderFilters(); renderGrid();
+  try { localStorage.setItem('np-cat', cat); } catch(_) {}
+});
+document.getElementById('q').addEventListener('input', e => { q = e.target.value; renderGrid(); });
+document.getElementById('grid').addEventListener('click', e => { const b = e.target.closest('.case'); if (b) openCase(+b.dataset.i); });
+
+/* viewer */
+const dlg = document.getElementById('viewer'), stage = document.getElementById('stage');
+function openCase(i){
+  cur = (i + visible.length) % visible.length; focusImg = null;
+  const c = visible[cur];
+  document.getElementById('v-no').textContent = `Case ${pad(c.n)} · ${c.cat}`;
+  document.getElementById('v-title').textContent = c.title;
+  document.getElementById('v-desc').textContent = c.desc;
+  document.getElementById('v-tags').innerHTML = tagsHTML(c);
+  const groups = [['before','Before'],['during','During treatment'],['after','After']];
+  document.getElementById('v-strips').innerHTML = groups.map(([g,label]) => {
+    const list = c.imgs.map((im,k)=>({im,k})).filter(x => x.im.g===g);
+    if (!list.length) return '';
+    return `<div class="strip"><h4>${label}</h4><div class="row">${list.map(x =>
+      `<button type="button" data-k="${x.k}" aria-label="${esc(label)}: ${esc(x.im.cap)}" title="${esc(x.im.cap)}"><img src="${x.im.src}" alt=""></button>`).join('')}</div></div>`;
+  }).join('');
+  if (!dlg.open) dlg.showModal();
+  try { history.replaceState(null,'','#case-'+c.n); } catch(_) {}
+  drawStage();
+}
+function drawStage(){
+  const c = visible[cur], b = first(c,'before'), a = first(c,'after');
+  const canCompare = b && a;
+  document.getElementById('mode').hidden = !canCompare || focusImg !== null;
+  document.querySelectorAll('#v-strips button').forEach(el => el.setAttribute('aria-current', String(focusImg !== null && +el.dataset.k === focusImg)));
+  const hint = document.getElementById('hint');
+  if (focusImg !== null || !canCompare){
+    const im = c.imgs[focusImg ?? 0];
+    const back = canCompare ? `<button type="button" class="iconbtn" id="back" style="width:auto;padding:0 14px;border-radius:999px;background:#F2F6F5;color:#10302F;border:0">Back to comparison</button>` : '';
+    stage.innerHTML = `<div class="single-view"><img src="${im.src}" alt="${esc(im.cap)}, case ${c.n}"><span class="cap">${esc(im.g)} · ${esc(im.cap)}</span>${back}</div>`;
+    hint.textContent = canCompare ? 'Viewing one record · ← → for other cases' : '← → for other cases';
+    const bk = document.getElementById('back'); if (bk) bk.onclick = () => { focusImg = null; drawStage(); };
+    return;
+  }
+  document.querySelectorAll('#mode button').forEach(el => el.setAttribute('aria-pressed', String(el.dataset.m===mode)));
+  if (mode === 'sbs'){
+    stage.innerHTML = `<div class="sbs"><figure><img src="${b.src}" alt="Before, case ${c.n}"><span class="lb b" style="position:absolute;left:8px;top:8px;font:500 11.5px var(--f-mono);padding:4px 8px;border-radius:5px;text-transform:uppercase">Before</span></figure><figure><img src="${a.src}" alt="After, case ${c.n}"><span class="lb a" style="position:absolute;right:8px;top:8px;font:500 11.5px var(--f-mono);padding:4px 8px;border-radius:5px;text-transform:uppercase">After</span></figure></div>`;
+    hint.textContent = 'Side by side · ← → for other cases';
+    return;
+  }
+  const ar = a.ar;
+  stage.innerHTML = `<div class="cmp" id="cmp" style="--ar:${ar};--pos:50%;width:min(100%, calc(68dvh * ${ar}))">
+    <img src="${a.src}" alt="After, case ${c.n}"><img class="bef" src="${b.src}" alt="Before, case ${c.n}">
+    <div class="handle"></div><span class="lb b" style="left:12px">Before</span><span class="lb a" style="right:12px">After</span>
+    <input type="range" id="slide" min="0" max="100" value="50" aria-label="Reveal before or after"></div>`;
+  hint.textContent = 'Drag to compare · ← → for other cases';
+  const cmp = document.getElementById('cmp'), r = document.getElementById('slide');
+  r.addEventListener('input', () => cmp.style.setProperty('--pos', r.value + '%'));
+}
+document.getElementById('v-strips').addEventListener('click', e => { const b = e.target.closest('button'); if (b){ focusImg = +b.dataset.k; drawStage(); } });
+document.getElementById('mode').addEventListener('click', e => { const b = e.target.closest('button'); if (b){ mode = b.dataset.m; drawStage(); } });
+document.getElementById('prev').onclick = () => openCase(cur-1);
+document.getElementById('next').onclick = () => openCase(cur+1);
+document.getElementById('close').onclick = () => dlg.close();
+dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+dlg.addEventListener('close', () => { try { history.replaceState(null,'','#cases'); } catch(_) {} });
+dlg.addEventListener('keydown', e => {
+  if (e.target.id === 'slide' || e.target.id === 'q') return;
+  if (e.key === 'ArrowRight'){ e.preventDefault(); openCase(cur+1); }
+  if (e.key === 'ArrowLeft'){ e.preventDefault(); openCase(cur-1); }
+});
+
+/* copy */
+const toast = document.getElementById('toast'); let tt;
+function say(m){ toast.textContent = m; toast.hidden = false; clearTimeout(tt); tt = setTimeout(()=>toast.hidden = true, 1600); }
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-copy]'); if (!b) return;
+  const v = b.dataset.copy;
+  const fallback = () => { const s = b.previousElementSibling; if (s){ const r = document.createRange(); r.selectNodeContents(s); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); } say('Selected. Press Ctrl/⌘+C to copy'); };
+  try { navigator.clipboard.writeText(v).then(() => say('Copied ' + v), fallback); } catch(_) { fallback(); }
+});
+
+/* boot */
+try { const s = localStorage.getItem('np-cat'); if (s && (s==='All' || CATS.includes(s))) cat = s; } catch(_) {}
+renderFilters(); renderGrid();
+const m = location.hash.match(/^#case-(\d+)$/);
+if (m){ cat = 'All'; renderFilters(); renderGrid(); const i = visible.findIndex(c => c.n === +m[1]); if (i >= 0) openCase(i); }
+</script>
+
+</body></html>
